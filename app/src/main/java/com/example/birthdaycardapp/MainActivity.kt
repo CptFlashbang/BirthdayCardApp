@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -53,18 +54,20 @@ fun BirthdayCard(
             alpha = 0.5F,
             modifier = Modifier.fillMaxSize()
         )
-        Column(modifier = Modifier.fillMaxSize()) {
+        Column(
+            verticalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier.fillMaxSize()) {
             Text(
                 text = message,
                 fontSize = 36.sp,
                 modifier = Modifier.padding(
-                    start = 16.dp, top = 16.dp)
+                    start = 16.dp, top=16.dp)
             )
             Text(
                 text = from,
                 fontSize = 24.sp,
                 modifier = Modifier.padding(
-                    start = 250.dp, top = 16.dp)
+                    start = 250.dp, bottom = 16.dp)
             )
         }
 

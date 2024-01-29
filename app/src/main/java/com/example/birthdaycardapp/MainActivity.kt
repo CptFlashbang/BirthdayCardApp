@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -17,6 +18,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.birthdaycardapp.ui.theme.BirthdayCardAppTheme
 
@@ -55,15 +57,17 @@ fun BirthdayCard(
             Text(
                 text = message,
                 fontSize = 36.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = modifier
+                modifier = Modifier.padding(
+                    start = 16.dp, top = 16.dp)
             )
             Text(
                 text = from,
                 fontSize = 24.sp,
-                modifier = modifier
+                modifier = Modifier.padding(
+                    start = 250.dp, top = 16.dp)
             )
         }
+
 
     }
 }

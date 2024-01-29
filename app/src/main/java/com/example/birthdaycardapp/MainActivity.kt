@@ -50,7 +50,8 @@ fun BirthdayCard(
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
                 painter = picture,
-                contentDescription = null
+                contentDescription = null,
+                modifier = modifier
         )
         Column(modifier = Modifier.fillMaxSize()){
             Text(

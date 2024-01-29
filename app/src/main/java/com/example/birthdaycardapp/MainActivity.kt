@@ -14,7 +14,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import com.example.birthdaycardapp.ui.theme.BirthdayCardAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -46,15 +48,19 @@ fun BirthdayCard(
                 contentDescription = null,
                 modifier = modifier
         )
-        Column(modifier = Modifier.fillMaxSize()){
+        Column(modifier = Modifier.fillMaxSize()) {
             Text(
-                    text = message,
-                    modifier = modifier
+                text = message,
+                fontSize = 36.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = modifier
             )
             Text(
-                    text = from,
-                    modifier = modifier
+                text = from,
+                fontSize = 24.sp,
+                modifier = modifier
             )
         }
+
     }
 }
